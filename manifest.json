@@ -1,0 +1,24 @@
+{
+  "name": "Environmental Monitor",
+  "short_name": "EnvMonitor",
+  "description": "Real-time environmental monitoring app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#764ba2",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSIzMiIgZmlsbD0iIzY2N2VlYSIvPjxjaXJjbGUgY3g9Ijk2IiBjeT0iNzAiIHI9IjIwIiBmaWxsPSJ3aGl0ZSIvPjxwYXRoIGQ9Ik01NiAxMjBDNTYgMTAwIDc2IDkwIDk2IDkwQzExNiA5MCAxMzYgMTAwIDEzNiAxMjAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iOCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNzYiIGN5PSIxMTAiIHI9IjQiIGZpbGw9IndoaXRlIi8+PGNpcmNsZSBjeD0iOTYiIGN5PSIxMTAiIHI9IjQiIGZpbGw9IndoaXRlIi8+PGNpcmNsZSBjeD0iMTE2IiBjeT0iMTEwIiByPSI0IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

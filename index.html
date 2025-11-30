@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#764ba2">
+   
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg">
+    
+    <title>Environmental Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Environmental Monitor</h1>
+            <div class="location-controls">
+                <button id="useCurrentLocation" class="btn-primary">
+                    📍 Use My Location
+                </button>
+                <div class="custom-location">
+                    <input type="text" id="customLocation" placeholder="Enter city name">
+                    <button id="searchLocation" class="btn-secondary">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading environmental data...</p>
+        </div>
+
+        <main class="dashboard" id="dashboard" style="display: none;">
+            <div class="location-info">
+                <h2 id="locationName">Unknown Location</h2>
+                <p id="coordinates"></p>
+            </div>
+
+            <div class="sensors-grid">
+                <div class="sensor-card">
+                    <div class="sensor-icon">🌡️</div>
+                    <h3>Temperature</h3>
+                    <div class="sensor-value" id="temperature">--°C</div>
+                    <div class="sensor-status" id="tempStatus">--</div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-icon">💧</div>
+                    <h3>Humidity</h3>
+                    <div class="sensor-value" id="humidity">--%</div>
+                    <div class="sensor-status" id="humidityStatus">--</div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-icon">🌊</div>
+                    <h3>Water Level</h3>
+                    <div class="sensor-value" id="waterLevel">--m</div>
+                    <div class="sensor-status" id="waterStatus">--</div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-icon">💨</div>
+                    <h3>Air Quality</h3>
+                    <div class="sensor-value" id="airQuality">-- AQI</div>
+                    <div class="sensor-status" id="airStatus">--</div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-icon">📊</div>
+                    <h3>Pressure</h3>
+                    <div class="sensor-value" id="pressure">-- hPa</div>
+                    <div class="sensor-status" id="pressureStatus">--</div>
+                </div>
+
+                <div class="sensor-card">
+                    <div class="sensor-icon">💨</div>
+                    <h3>Wind Speed</h3>
+                    <div class="sensor-value" id="windSpeed">-- m/s</div>
+                    <div class="sensor-status" id="windStatus">--</div>
+                </div>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-container">
+                    <h3>Temperature (8 Weeks)</h3>
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Humidity (8 Weeks)</h3>
+                    <canvas id="humidityChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Water Level (8 Weeks)</h3>
+                    <canvas id="waterChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Air Quality (8 Weeks)</h3>
+                    <canvas id="airChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Pressure (8 Weeks)</h3>
+                    <canvas id="pressureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Wind Speed (8 Weeks)</h3>
+                    <canvas id="windChart"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <div class="error" id="error" style="display: none;">
+            <h3>❌ Error</h3>
+            <p id="errorMessage"></p>
+            <button onclick="hideError()" class="btn-primary">Try Again</button>
+        </div>
+    </div>
+
+    <script src="js/location.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/pwa.js"></script>
+</body>
+</html>

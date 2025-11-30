@@ -1,0 +1,8 @@
+{
+  "sample": {
+    "temperature": 22.5,
+    "humidity": 65,
+    "waterLevel": 2.8,
+    "airQuality": 45
+  }
+}
